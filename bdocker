@@ -1,0 +1,21 @@
+docker --version
+docker pull ubuntu
+docker images
+docker run -it ubuntu
+exit
+docker ps
+docker ps -a
+docker start containerid
+docker stop container id
+docker rm container id
+{
+
+FROM ubuntu
+RUN opt-get update && apt-get install -ycurl
+CMD["echo","HELLO,DOCKER!"]
+
+}
+cd(pathfile)
+rename Dockerfile.txt Dockerfile
+docker build -t mycustomimage
+docker run mycustomimage
