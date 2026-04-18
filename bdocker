@@ -5,17 +5,17 @@ docker run -it ubuntu
 exit
 docker ps
 docker ps -a
-docker start containerid
-docker stop container id
-docker rm container id
+docker start <container_id>
+docker stop <container_id>
+docker rm <container_id>
 {
 
 FROM ubuntu
-RUN opt-get update && apt-get install -ycurl
-CMD["echo","HELLO,DOCKER!"]
+RUN apt-get update && apt-get install -y curl
+CMD ["echo", "HELLO,DOCKER!"]
 
 }
 cd(pathfile)
 rename Dockerfile.txt Dockerfile
-docker build -t mycustomimage
+docker build -t mycustomimage .
 docker run mycustomimage
