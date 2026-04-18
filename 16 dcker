@@ -1,0 +1,15 @@
+docker --version
+docker pull MySQL:latest
+docker ru --name mysql-container -e MYSQL_ROOT_PASSWORD=root123 -d -p 3306:3306 mysql:latest
+docker ps
+docker exec -it myql-container mysql -u root -p
+root123
+SHOW DATABASES;
+CTREATE DATABASE tesdb;
+USE testtb;
+CREATE TABLE students(
+id INT,
+name VARCHAR(50)
+);
+INSERT INTO students VALUES('1','KISHAN');
+SELECT*FROM students;
